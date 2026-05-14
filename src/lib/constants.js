@@ -5,6 +5,8 @@ export const TABS = [
   { id: "images", label: "Images" },
   { id: "videos", label: "Videos" },
   { id: "news", label: "News" },
+  { id: "music", label: "Music" },
+  { id: "it", label: "IT" },
 ];
 
 export const CATEGORY_MAP = {
