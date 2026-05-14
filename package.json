@@ -1,0 +1,31 @@
+{
+  "name": "search-ui",
+  "productName": "Search UI",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SearXNG UI by noemt.dev",
+  "author": {
+    "name": "Dennis",
+    "email": "me@noemt.dev"
+  },
+  "scripts": {
+    "dev": "vite --port 37837",
+    "build": "vite build",
+    "preview": "vite preview --port 37837",
+    "server": "node index.js",
+    "start": "npm run build && node index.js"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.0",
+    "express": "^5.2.1",
+    "lucide-react": "^0.575.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "vite": "^7.3.1"
+  }
+}
