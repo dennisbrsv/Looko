@@ -56,6 +56,16 @@ app.get('/api/search/web', async (req, res) => {
 
     const categories = req.query.categories;
     if (categories) params.set('categories', categories);
+    
+    // Add time_range and language params support
+    const time_range = req.query.time_range;
+    if (time_range) params.set('time_range', time_range);
+    
+    const language = req.query.language;
+    if (language) params.set('language', language);
+
+    const safesearch = req.query.safesearch;
+    if (safesearch !== undefined) params.set('safesearch', safesearch);
 
     const response = await fetch(`${SEARXNG_URL}/search?${params}`);
     if (!response.ok) throw new Error(`SearXNG returned ${response.status}`);
@@ -100,6 +110,15 @@ app.get('/api/search/images', async (req, res) => {
       categories: 'images',
       pageno: String(pageno),
     });
+
+    const time_range = req.query.time_range;
+    if (time_range) params.set('time_range', time_range);
+    
+    const language = req.query.language;
+    if (language) params.set('language', language);
+
+    const safesearch = req.query.safesearch;
+    if (safesearch !== undefined) params.set('safesearch', safesearch);
 
     const response = await fetch(`${SEARXNG_URL}/search?${params}`);
     if (!response.ok) throw new Error(`SearXNG returned ${response.status}`);
