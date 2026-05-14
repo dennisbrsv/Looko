@@ -13,4 +13,6 @@ export const CATEGORY_MAP = {
   all: undefined,
   videos: "videos",
   news: "news",
+  music: "music",
+  it: "it",
 };
